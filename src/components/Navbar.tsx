@@ -11,7 +11,17 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="flex items-center gap-2">
-            <Bird className="h-6 w-6 text-blue-500 animate-pulse hover:scale-110 transition-transform duration-200 transform rotate-[-15deg]" />
+            <Bird 
+              className="h-8 w-8 text-blue-600 
+              animate-[eagle-soar_4s_ease-in-out_infinite] 
+              hover:animate-none 
+              hover:scale-110 
+              transition-transform 
+              duration-300 
+              transform 
+              -rotate-12 
+              hover:rotate-0" 
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
               Software
             </span>
