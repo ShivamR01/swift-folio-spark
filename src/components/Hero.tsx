@@ -31,13 +31,13 @@ const Hero = () => {
       </video>
 
       {/* Fallback background image */}
-      <div 
+      {/* <div 
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-[1]" 
         style={{ 
           backgroundImage: 'url("/hero-background.jpg")',
           opacity: 0.5
         }}
-      />
+      /> */}
 
       {/* Dark overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[2]" />
