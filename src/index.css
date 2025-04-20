@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 0%; /* Pure black background */
+    --foreground: 0 0% 98%; /* Light foreground for contrast */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -51,8 +51,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     .dark {
-      --background: 240 10% 3.9%;
-      --foreground: 0 0% 98%;
+      --background: 0 0% 0%; /* Pure black for dark mode */
+      --foreground: 0 0% 98%; /* Light foreground for dark mode */
+      
       --card: 240 10% 3.9%;
       --card-foreground: 0 0% 98%;
       --popover: 240 10% 3.9%;
