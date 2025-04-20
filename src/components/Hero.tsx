@@ -18,9 +18,33 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="pt-32 pb-20 px-4 bg-black">
-      <div className="container mx-auto text-center animate-fade-in">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+    <section className="relative pt-32 pb-20 px-4 min-h-screen flex items-center">
+      {/* Background video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/hero-background.mp4" type="video/mp4" />
+      </video>
+
+      {/* Fallback background image */}
+      <div 
+        className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-[1]" 
+        style={{ 
+          backgroundImage: 'url("/hero-background.jpg")',
+          opacity: 0.5
+        }}
+      />
+
+      {/* Dark overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-[2]" />
+
+      {/* Content */}
+      <div className="container mx-auto text-center relative z-[3] animate-fade-in">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
           Turning Ideas into
           <span className="animate-text-gradient bg-[size:200%] transition-all duration-500"> {text}</span>
         </h1>
