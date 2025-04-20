@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 0%; /* Pure black background */
+    --foreground: 0 0% 98%; /* Light foreground for contrast */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -51,8 +51,9 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     .dark {
-      --background: 240 10% 3.9%;
-      --foreground: 0 0% 98%;
+      --background: 0 0% 0%; /* Pure black for dark mode */
+      --foreground: 0 0% 98%; /* Light foreground for dark mode */
+      
       --card: 240 10% 3.9%;
       --card-foreground: 0 0% 98%;
       --popover: 240 10% 3.9%;
@@ -81,4 +82,31 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .animate-text-gradient {
+    @apply bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient;
+  }
+
+  .animate-fade-in {
+    @apply animate-[fadeIn_0.5s_ease-in];
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
