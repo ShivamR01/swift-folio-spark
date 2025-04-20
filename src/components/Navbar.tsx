@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Sparkles } from "lucide-react";
+import { Moon, Sun, Bird } from "lucide-react";
 import { useTheme } from "next-themes";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="flex items-center gap-2">
-            <Sparkles className="h-6 w-6 text-blue-500 animate-pulse" />
+            <Bird className="h-6 w-6 text-blue-500 animate-pulse hover:scale-110 transition-transform duration-200 transform rotate-[-15deg]" />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent animate-gradient">
               Software
             </span>
